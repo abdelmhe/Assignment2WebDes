@@ -1,4 +1,4 @@
-package com.fifa.wordcup.app.dao;
+package com.abdelmhe.sheridancollege.demo.dao;
 
 import com.fifa.wordcup.app.model.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
