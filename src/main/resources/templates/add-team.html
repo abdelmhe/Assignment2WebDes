@@ -1,10 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>2A Hebat Abdelmouneim</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">2A Hebat Abdelmouneim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">Add Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/edit">Edit Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/delete">Delete Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/display">Display Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-primary" role="alert" th:text="${success}" th:if="${success}"></div>
+                <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/createTeam}" th:object="${team}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-10">
+                                <label for="teamName" class="col-form-label">Team Name</label>
+                                <input type="text" th:field="*{teamName}" class="form-control"
+                                       id="teamName"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="teamFlag" class="col-form-label">Team Flag</label>
+                                <input type="text" th:field="*{teamFlag}" class="form-control"
+                                       id="teamFlag"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="continent" class="col-form-label">Continent</label>
+                                <input type="text" th:field="*{continent}" class="form-control"
+                                       id="continent"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="played" class="col-form-label">Played</label>
+                                <input type="number" th:field="*{played}" class="form-control"
+                                       id="played"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="won" class="col-form-label">Won</label>
+                                <input type="number" th:field="*{won}" class="form-control"
+                                       id="won"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="drawn" class="col-form-label">Drawn</label>
+                                <input type="number" th:field="*{drawn}" class="form-control"
+                                       id="drawn"/>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="lost" class="col-form-label">Lost</label>
+                                <input type="number" th:field="*{lost}" class="form-control"
+                                       id="lost"/>
+                            </div>
+                            <input type="hidden" id="teamID" th:field="*{teamID}">
+
+                            <div class="form-group col-md-10">
+                                <br>
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">© 2021  “Hebat-Abdelmouneim” All rights reserved.</span>
+    </div>
+</footer>
+
+
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
