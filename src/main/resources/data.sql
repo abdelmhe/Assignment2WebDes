@@ -1,0 +1,8 @@
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('France', 'https://image.shutterstock.com/image-vector/france-flag-vector-260nw-547572946.jpg', 'Europe', 7, 6, 1, 0);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Belgium', 'https://image.shutterstock.com/image-illustration/illustration-flag-belgium-260nw-124331719.jpg', 'Europe', 7, 6, 0, 1);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Croatia', 'https://images-na.ssl-images-amazon.com/images/I/51YrxNHYAML._AC_SX425_.jpg', 'Europe', 7, 4, 2, 1);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Uruguay', 'https://image.shutterstock.com/image-illustration/uruguayan-flag-hd-background-uruguay-260nw-439257847.jpg', 'S. America', 5, 4, 0, 1);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Brazil', 'https://www.flags-flagpoles-banners.co.uk/wp-content/uploads/2015/01/Brazil-flag.jpg', 'S. America', 5, 3, 1, 1);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('England', 'https://i.pinimg.com/originals/50/b9/59/50b9595f67e47f6d794e3ae3fe98a123.jpg', 'Europe', 7, 3, 1, 3);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Sweden', 'https://images-na.ssl-images-amazon.com/images/I/51f0S5x3U9L._AC_SL1220_.jpg', 'Europe', 5, 3, 0, 2);
+INSERT INTO	TEAMS (team_name, team_flag, continent, played, won, drawn, lost) VALUES ('Russia', 'https://koryogroup.com/ckeditor_assets/pictures/979/content_russianflag.png', 'Europe', 5, 2, 2, 1);
